@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "task-Shirish_Tripathi_Dot_Net_Assignment",
+      "appliesTo": "/",
+      "type": "launch"
+    }
+  ]
+}

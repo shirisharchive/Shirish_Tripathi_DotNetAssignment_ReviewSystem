@@ -1,0 +1,64 @@
+﻿@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+@using Microsoft.AspNetCore.Identity
+
+@{
+    ViewData["Title"] = "Laptop Review System";
+}
+
+<div class="container text-center mt-5">
+    <div class="jumbotron bg-light p-5 shadow rounded">
+        <h1 class="display-4 text-primary fw-bold">Welcome to Laptop Review System</h1>
+        <p class="lead text-secondary">
+            Share your thoughts and experiences on different laptops. Help others make informed decisions!
+        </p>
+        <hr class="my-4">
+        <p class="text-muted">Your review matters! Rate and review laptops to guide fellow buyers.</p>
+
+        @if (SignInManager.IsSignedIn(User))
+        {
+            <a class="btn btn-primary btn-lg mt-3" href="@Url.Action("Create", "Reviewers")">Write a Review</a>
+        }
+        else
+        {
+            <a class="btn btn-secondary btn-lg mt-3" href="@Url.Action("Login", "Account")">Sign in to Review</a>
+        }
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-md-4">
+            <div class="card shadow-lg p-3">
+                <img src="https://source.unsplash.com/300x200/?laptop,technology" class="card-img-top rounded" alt="Laptop">
+                <div class="card-body">
+                    <h5 class="card-title text-primary">Why Review Laptops?</h5>
+                    <p class="card-text">Your insights help others choose the best laptops based on real user feedback.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow-lg p-3">
+                <img src="https://source.unsplash.com/300x200/?rating,stars" class="card-img-top rounded" alt="Rating">
+                <div class="card-body">
+                    <h5 class="card-title text-primary">Rate & Compare</h5>
+                    <p class="card-text">Compare laptops based on user ratings and find the best option for your needs.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow-lg p-3">
+                <img src="https://source.unsplash.com/300x200/?feedback,review" class="card-img-top rounded" alt="Feedback">
+                <div class="card-body">
+                    <h5 class="card-title text-primary">Your Opinion Matters</h5>
+                    <p class="card-text">Write honest reviews and contribute to a community of tech enthusiasts.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

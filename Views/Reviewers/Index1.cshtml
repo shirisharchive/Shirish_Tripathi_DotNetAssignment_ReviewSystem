@@ -1,0 +1,80 @@
+﻿@page
+@using Microsoft.AspNetCore.Identity
+@model Shirish_Tripathi_Dot_Net_Assignment.Views.Reviewers.Index1Model
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+@{
+    ViewData["Title"] = "Laptop Reviews";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptop Review</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        .star-rating .fa-star {
+        cursor: pointer;
+        color: #ddd;
+        }
+        .star-rating .fa-star.checked {
+        color: gold;
+        }
+    </style>
+</head>
+<body>
+    @if (SignInManager.IsSignedIn(User))
+    {
+        <div class="container mt-5">
+            <h2 class="text-center">Laptop Review System</h2>
+            <form method="post">
+                <div class="mb-3">
+                    <label for="laptopName" class="form-label">Laptop Model</label>
+                    <input type="text" class="form-control" id="laptopName" name="LaptopName" required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Rate the Laptop</label>
+                    <div class="star-rating" id="starRating">
+                        <i class="fa fa-star" data-value="1"></i>
+                        <i class="fa fa-star" data-value="2"></i>
+                        <i class="fa fa-star" data-value="3"></i>
+                        <i class="fa fa-star" data-value="4"></i>                        <i class="fa fa-star" data-value="5"></i>
+                    </div>
+                    <input type="hidden" id="ratingValue" name="Rating" value="0">
+                </div>
+
+                <div class="mb-3">
+                    <label for="feedback" class="form-label">Your Feedback</label>
+                    <textarea class="form-control" id="feedback" name="Feedback" rows="4" required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit Review</button>
+            </form>
+        </div>
+    }
+    <script>
+            document.addEventListener("DOMContentLoaded", function () {
+            const stars = document.querySelectorAll(".star-rating .fa-star");
+            const ratingInput = document.getElementById("ratingValue");
+
+            stars.forEach(star => {
+            star.addEventListener("click", function () {
+            let value = this.getAttribute("data-value");
+            ratingInput.value = value;
+
+            stars.forEach(s => s.classList.remove("checked"));
+            for (let i = 0; i < value; i++) {
+            stars[i].classList.add("checked");
+            }
+            });
+            });
+            });
+        </script>
+    
+</body>
+</html>
