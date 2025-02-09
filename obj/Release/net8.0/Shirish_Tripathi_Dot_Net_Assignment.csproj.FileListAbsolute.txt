@@ -295,3 +295,4 @@ C:\Users\Dell\Desktop\dotnet\Shirish_Tripathi_Dot_Net_Assignment\obj\Release\net
 C:\Users\Dell\Desktop\dotnet\Shirish_Tripathi_Dot_Net_Assignment\obj\Release\net8.0\Shirish_Tripathi_Dot_Net_Assignment.pdb
 C:\Users\Dell\Desktop\dotnet\Shirish_Tripathi_Dot_Net_Assignment\obj\Release\net8.0\Shirish_Tripathi_Dot_Net_Assignment.genruntimeconfig.cache
 C:\Users\Dell\Desktop\dotnet\Shirish_Tripathi_Dot_Net_Assignment\obj\Release\net8.0\ref\Shirish_Tripathi_Dot_Net_Assignment.dll
+C:\Users\Dell\Desktop\dotnet\Shirish_Tripathi_Dot_Net_Assignment\obj\Release\net8.0\Shirish_Tripathi_Dot_Net_Assignment.sourcelink.json

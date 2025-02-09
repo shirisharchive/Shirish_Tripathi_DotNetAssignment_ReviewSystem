@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Shirish_Tripathi_Dot_Net_Assignment")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+059ce01d8711eee1fee8b7929b9394ca0ff7a9e0")]
 [assembly: System.Reflection.AssemblyProductAttribute("Shirish_Tripathi_Dot_Net_Assignment")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Shirish_Tripathi_Dot_Net_Assignment")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
